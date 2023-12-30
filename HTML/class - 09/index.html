@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1>Hello World</h1>
+
+    <form method="post">
+        <label>
+            User Name: <input type="text" name="user-name" />
+        </label>
+        <br /><br />
+        <label>
+            Password: <input type="password" name="password" />
+        </label>
+        <br /><br />
+        <label>
+            Confirm Password: <input type="password" name="confirm-password" />
+        </label>
+        <br /><br />
+
+        <p>Gender</p>
+        <label> Male <input type="radio" name="gender" value="male" /></label>
+        <label> Female <input type="radio" name="gender" value="female" /></label>
+        <label>Other <input type="radio" name="gender" value="other" /></label>
+
+        <br /><br />
+
+
+
+
+        <p>Pick any one subject:</p>
+
+        <label>JavaScript <input type="radio" name="subject" value="JavaScript" /></label>
+        <label> Python <input type="radio" name="subject" value="Python" /></label>
+        <label> Solidity <input type="radio" name="subject" value="Solidity" /></label>
+        <br /><br />
+
+
+
+        <p>Select your interest:</p>
+
+        <label>Photography <input type="checkbox" name="interest" value="Photography" /></label>
+
+
+        <label>Gardening <input type="checkbox" name="interest" value="gardening" /></label>
+
+        <label>Video Games <input type="checkbox" name="interest" value="video games" /></label>
+
+        <br />
+        <br />
+
+        <label>Upload your image: <input type="file" name="dp"></label>
+
+
+
+
+        <br />
+        <br />
+        <input type="submit" value="Create Account" />
+    </form>
+</body>
+
+</html>
