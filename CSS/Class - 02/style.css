@@ -1,0 +1,52 @@
+* {
+    background-color: burlywood;
+}
+
+h1,
+p {
+    color: brown;
+}
+
+#special {
+    font-weight: bold;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.underlined-colored {
+    color: blueviolet;
+}
+
+h1.underline {
+    text-transform: uppercase;
+}
+
+
+
+
+div>ul>li>a {
+    color: red;
+}
+
+div a {
+    background-color: aliceblue;
+}
+
+
+
+div,
+h1 {}
+
+div>h1 {}
+
+div h1 {}
+
+
+
+
+
+#para-1 {
+    background-color: bisque;
+}
