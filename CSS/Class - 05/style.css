@@ -1,0 +1,17 @@
+* {
+    background-color: yellow;
+}
+
+h1 {
+
+    /* color: red; */
+    color: #ff0000;
+    background-color: #55ffee80;
+    /* background-color: #55ffee80; */
+    /* opacity: 0.3; */
+}
+
+
+p {
+    background-color: hsla(200, 40%, 75%, 0.5);
+}
