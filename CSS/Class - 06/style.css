@@ -1,0 +1,116 @@
+/* .container {
+    font-size: 20px;
+}
+
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    font-size: 150%;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 75%;
+} */
+
+/* .short-size {
+    font-size: 1.25em;
+    color: red;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    /* background-color: black; */
+    /* color: white; */
+    /* width: 900px; */
+}
+
+
+h1 {
+    /* border: 1px solid red; */
+    font-size: 60px;
+    /* text-indent: -1000px; */
+    /* background-color: pink; */
+    /* width: 75%; */
+    /* font-weight: normal; */
+    /* font-style: italic; */
+    text-transform: uppercase;
+    text-decoration: underline;
+    /* letter-spacing: 0.8em; */
+    /* text-align: center; */
+    /* text-align: right; */
+    /* margin: auto; */
+}
+
+p {
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    /* word-spacing: 0.8em; */
+    /* line-height: 0.5em; */
+    /* text-align: justify; */
+    /* text-align: left; */
+    text-indent: 80px;
+}
+
+.short-size {
+    color: red;
+    font-size: 1.4em;
+    font-style: normal;
+}
+
+
+a {
+    text-decoration: none;
+}
