@@ -1,0 +1,79 @@
+.container {
+    background-color: pink;
+    height: 450px;
+}
+
+h1,
+p {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+    width: 50%;
+    height: 100px;
+}
+
+p {
+    height: 50%;
+    /* overflow: scroll; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h1 {
+    /*
+    border: 1px solid red;
+    */
+    /* border-width: 10px 5px 15px 25px;
+    border-style: dotted solid double dashed;
+    border-color: red green blue purple; */
+
+    /* border-width: 10px 0 0 0;
+    border-style: solid;
+    border-color: red; */
+
+
+
+
+    /* 
+    border-top-width: 10px;
+    border-left-width: 5px;
+
+    border-top-style: solid;
+    border-left-style: dashed;
+
+    border-top-color: purple;
+    border-left-color: green;
+*/
+
+
+    border-right-width: 5px;
+    border-right-style: solid;
+    border-right-color: purple;
+
+
+
+}
