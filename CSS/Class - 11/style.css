@@ -1,0 +1,47 @@
+.even {
+    width: 50%;
+    position: relative;
+    left: 50%;
+    /* left: -200px; */
+
+}
+
+.odd {
+    width: 50%;
+}
+
+h2 {
+    background-color: pink;
+    position: absolute;
+    top: 140px;
+    left: 500px;
+    z-index: 5;
+}
+
+p {
+    background-color: aliceblue;
+
+}
+
+h3 {
+    background-color: red;
+    position: fixed;
+    top: 150px;
+    z-index: -5;
+}
+
+
+
+p {
+    position: relative;
+    left: 70px;
+}
+
+
+
+a {
+    position: sticky;
+    top: 70px;
+    left: 70px;
+    z-index: 10;
+}
