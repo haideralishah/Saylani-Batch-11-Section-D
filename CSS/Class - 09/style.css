@@ -1,0 +1,103 @@
+.container {
+    border: 5px solid red;
+    width: 250px;
+    /* height: 150px; */
+    padding: 10px;
+    margin: 10px;
+    margin: 0 auto;
+}
+
+body {
+    /* margin: 0; */
+    color: red;
+}
+
+
+.container>p {
+    /* display: none; */
+    /* visibility: hidden; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h2+p {
+    /* background-color: greenyellow; */
+    /* display: inline-block; */
+    border: 30px solid red;
+    border-image: url("images/heart-boder1.jpg") 65 65 65 65 repeat;
+
+
+}
+
+
+
+.container {
+    box-shadow: -20px 20px 10px #ffc0cb;
+    /* border-radius: 40px; */
+    /* border-radius: 170px 50px 20px 100px;  */
+    border-radius: 50px 60px 30px 20px / 80px 30px 60px 50px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Width */
+
+.responsive{
+    background-color: pink;
+    padding: 10px;
+    width: 80%;
+    min-width: 250px;
+    max-width: 350px;
+}

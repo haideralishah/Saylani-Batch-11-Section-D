@@ -9,8 +9,8 @@ p {
 }
 
 h1 {
-    width: 50%;
-    height: 100px;
+    /* width: 50%;
+    height: 100px; */
 }
 
 p {
@@ -44,9 +44,9 @@ p {
 
 
 h1 {
-    /*
-    border: 1px solid red;
-    */
+    
+    /* border: 1px solid red; */
+   
     /* border-width: 10px 5px 15px 25px;
     border-style: dotted solid double dashed;
     border-color: red green blue purple; */
@@ -69,11 +69,44 @@ h1 {
     border-left-color: green;
 */
 
-
+/* 
     border-right-width: 5px;
     border-right-style: solid;
-    border-right-color: purple;
+    border-right-color: purple; */
 
+
+
+
+
+    border:10px solid red;
+    /* border-bottom-width: 0;
+    border-right-style: dotted; 
+    border-right-color: green; */
+}
+
+
+
+
+
+
+body{
+    margin: 0;
+}
+h1{
+    /* padding: 20px 40px 40px 50px; */
+    
+    padding-left: 50px;
 
 
 }
+p{
+    border:10px solid red;
+    padding: 20px;
+    margin: 0;
+    margin-top:2px;
+}
+
+h1{
+    margin: 0;
+}
+
