@@ -1,0 +1,23 @@
+.large {
+    width: 300px;
+    height: 200px;
+}
+
+img {
+    float: right;
+}
+
+
+.bg-img {
+    color: black;
+    padding: 20px;
+    font-size: 22px;
+    /* background-color: #eecec3;
+    background-image: url("images/rose.avif");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center left; */
+    background:#eecec3 url("images/rose.avif") no-repeat fixed center center;
+
+  
+}

@@ -1,0 +1,39 @@
+h3 {
+    background-color: bisque;
+    margin: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.container {
+    border: 1px solid red;
+    height: 200px;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: space-around; */
+    /* justify-content: space-between; */
+    /* justify-content: space-evenly; */
+    align-items: flex-end;
+}
+
+
+
+
+
+.special{
+    width: 300px;
+}
+
+
+
+p{
+    width: 200px;
+}
+
+.col-layout{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
