@@ -1,0 +1,22 @@
+.container {
+    padding: 0;
+    border: 1px solid red;
+    height: 200px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    /* align-content: space-evenly; */
+}
+
+.container>h3 {
+    margin: 0;
+    border: 1px solid green;
+    /* width: 200px; */
+    height: 50px;
+}
+
+
+.special {
+    /* align-self: center; */
+    flex-basis: 130px;
+}

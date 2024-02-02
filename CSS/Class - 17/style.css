@@ -1,0 +1,64 @@
+h1 {
+    /* height: 55px;
+    background-color: antiquewhite; */
+    /* transition: font-size 8s, background-color 8s, color 8s, margin 8s; */
+    /* transition-delay: 2s; */
+    /* transition-timing-function: ease-out; */
+    /* transition: margin 4s; */
+}
+
+h1:hover {
+    /* font-size: 40px;
+    background-color: cornflowerblue;
+    color: #ffffff;
+    margin: 40px; */
+}
+
+
+/* h1 {
+    background-color: antiquewhite;
+    transform: rotate(160deg);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes heading-animation {
+    from {
+        background-color: #0c18f0;
+        font-size: 32px;
+        color: #ccaeae;
+        /* transform: rotate(0deg); */
+        position: relative;
+        left: 0px;
+    }
+
+    to {
+        background-color: #12d415;
+        font-size: 40px;
+        color: #ffffff;
+        /* transform: rotate(180deg); */
+        position: relative;
+        left: 350px
+    }
+}
+
+h1 {
+    width: 100%;
+    line-height: 3em;
+    animation-name: heading-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
