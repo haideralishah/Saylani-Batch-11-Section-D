@@ -1,0 +1,65 @@
+ /* h1 {
+     transition: background-color 2s, color 4s, transform 4s;
+     transition-delay: 1s;
+ }
+
+ h1:hover {
+     background-color: blue;
+     color: red;
+     transform: rotate(180deg);
+ } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @keyframes head-animation {
+     0% {
+         background-color: red;
+         top: 0px;
+     }
+
+     25% {
+         background-color: blue;
+         top: 200px;
+     }
+
+     50% {
+         background-color: green;
+         top: 0px;
+     }
+
+     100% {
+         background-color: yellow;
+         top: 200px;
+     }
+ }
+
+ h1 {
+     position: relative;
+     animation-name: head-animation;
+     animation-duration: 4s;
+     animation-delay: 1s;
+     animation-iteration-count: infinite;
+     animation-direction: alternate;
+ }
