@@ -1,0 +1,27 @@
+git config --global user.name <your user name>
+git config --global user.name <your email>
+
+
+git init 
+
+git status
+stage, commit(username, email and message)
+To Stage:
+git add <file name>
+To Commit:
+git commit -m "<message>"
+
+
+To see previous commits
+git log
+
+
+
+
+
+Branch related commands:
+git branch
+git branch <branch name>
+git checkout <branch name>
+
+
