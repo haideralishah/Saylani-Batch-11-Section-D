@@ -1,5 +1,5 @@
 git config --global user.name <your user name>
-git config --global user.name <your email>
+git config --global user.email <your email>
 
 
 git init 
@@ -12,8 +12,11 @@ To Commit:
 git commit -m "<message>"
 
 
-To see previous commits
+To see detail previous commits
 git log
+
+To see precise commit history
+git log --oneline
 
 
 
