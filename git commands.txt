@@ -1,5 +1,5 @@
 git config --global user.name <your user name>
-git config --global user.name <your email>
+git config --global user.email <your email>
 
 
 git init 
@@ -24,4 +24,16 @@ git branch
 git branch <branch name>
 git checkout <branch name>
 
+To merge first come to parent branch
+git merge <branch name>
+
+
+
+
+
+
+git remote add origin <remoteURL>
+git push -u origin <branchName>
+git clone <repositoryURL>
+git pull
 
