@@ -34,6 +34,22 @@ git merge <branch name>
 
 git remote add origin <remoteURL>
 git push -u origin <branchName>
+
+
+
 git clone <repositoryURL>
 git pull
+
+
+
+
+
+
+
+
+
+
+
+
+
 

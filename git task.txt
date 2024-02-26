@@ -1,0 +1,22 @@
+fist assignment 
+Hello World
+
+second assignment
+Saylani Website
+first section (master)
+push
+
+checkout to development
+second section (development)
+push development branch
+merge to master
+push master branch
+
+checkout to development
+third section (development)
+push development branch
+merge to master
+push master branch
+
+
+
