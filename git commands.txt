@@ -12,8 +12,11 @@ To Commit:
 git commit -m "<message>"
 
 
-To see previous commits
+To see detail previous commits
 git log
+
+To see precise commit history
+git log --oneline
 
 
 
