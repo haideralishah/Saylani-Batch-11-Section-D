@@ -334,21 +334,223 @@
 //Jan Birth
 //June  Anniversary
 //Nov Job Anniversary
-function greetUser(monthName) {
-    if (monthName === "Jan") {
-        return "Happy Birthday";
-    }
-    else if (monthName === "Jun") {
-        return "Happy Wedding Anniversary";
-    }
-    else if (monthName === "Nov") {
-        return "Congrats! You have completed 2 years in our organisation.";
-    }
-}
+// function greetUser(monthName) {
+//     if (monthName === "Jan") {
+//         return "Happy Birthday";
+//     }
+//     else if (monthName === "Jun") {
+//         return "Happy Wedding Anniversary";
+//     }
+//     else if (monthName === "Nov") {
+//         return "Congrats! You have completed 2 years in our organisation.";
+//     }
+// }
 
-let greetMsg = greetUser("Nov");
+// let greetMsg = greetUser("Nov");
 
-console.log(greetMsg);
+// console.log(greetMsg);
 
-let h1El = document.querySelectorAll('h1');
-h1El[0].innerHTML = greetMsg;
+// let h1El = document.querySelectorAll('h1');
+// h1El[0].innerHTML = greetMsg;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function greetUser(userName) {
+//     return `Assalamualiakum ${userName}`;
+// }
+
+// function findCube(num) {
+//     return num * num * num;
+// }
+
+// let msg = greetUser('Abdullah');
+// let fee = findCube(7);
+
+// console.log(`${greetUser("Abdullah")}. Your fee is due, please clear it.
+//     Total Amount: ${findCube(10)}
+
+// `);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let user1 = "Haider";
+// let user2 = 'Abdullah'
+
+// function replaceUser() {
+//     let user1 = 'Ali';
+//     user2 = 'Shah';
+
+//     console.log(user1, user2); // ali // shah
+// }
+
+// console.log(user1, user2); // haider //Abdullah
+
+// replaceUser();
+
+// console.log(user1, user2); // haider //Shah
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let theSum;
+
+// function addNumbers() {
+//     let theSum = 2 + 2;
+//     console.log(theSum)
+// }
+
+// addNumbers();
+
+// console.log(theSum);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var userName = "haider";
+
+// function renameUser() {
+//     var userName = "ali";
+//     if (true) {
+//         var userName = "shah";
+//         console.log(userName)
+//     }
+//     console.log(userName);
+// }
+
+// renameUser();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let user1 = "Haider Ali";
+// const user2 = "Abdullah";
+
+// const msg = 'Assalamualaikum! How may I help you?';
+
+// user1 = 'Abdullah'
+// msg = 'Eid Mubarak';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
