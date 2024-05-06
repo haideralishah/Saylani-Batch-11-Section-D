@@ -1,0 +1,11 @@
+.failure {
+    color: #ff0000;
+    padding: 2em;
+    border: 1px solid #ff0000;
+}
+
+.success {
+    color: #008000;
+    padding: 2em;
+    border: 1px solid #008000;
+}
