@@ -1,4 +1,8 @@
-.error-msg{
-    color: red;
-    text-align: center;
+.error-msg {
+  color: red;
+  text-align: center;
+}
+
+.hide {
+  display: none;
 }

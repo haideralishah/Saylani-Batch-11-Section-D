@@ -8,10 +8,17 @@
   </head>
 
   <body>
-    <input type="text" name="new-todo" class="new-todo" />
-    <button onclick="add()">Add</button>
-
+    <div id="add-new-todo-container">
+      <input type="text" name="new-todo" class="new-todo" />
+      <button onclick="add()">Add</button>
+    </div>
+    <div class="hide" id="edit-todo-container">
+      <input type="text" name="edit-todo" class="edit-todo" />
+      <button onclick="upadateTodo()">Save</button>
+    </div>
     <div class="todo-list"></div>
+
+    <p class="error-msg"></p>
 
     <script src="app.js"></script>
   </body>
