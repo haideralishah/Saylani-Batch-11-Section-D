@@ -1,27 +1,13 @@
-function Student(name, rollNum, isFeePaid) {
-    this.name = name;
-    this.rollNum = rollNum;
-    this.isFeePaid = isFeePaid;
+class Abc{
+    _name
 }
-Student.prototype.subjects = ["HTML", "CSS", "JavaScript"];
-
-let student1 = new Student("Haider", 2643, true);
-let student2 = new Student("Abdullah", 2644, false);
-let student3 = new Student("Muzammil", 2645, true);
-
-student3.subjects = ["Python"];
-// console.log(student3.subjects)
-
-delete student1.isFeePaid;
-student1.specialQuota = true
-let allStudents = [student1, student2, student3];
 
 
 
 
+obj bcd 
 
-
-
+bcd._name
 
 
 
