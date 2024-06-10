@@ -555,3 +555,246 @@ userName => `Welcome ${userName}!`;
 // let greet = makeGreeting('haider');
 
 // console.log(greet);
+
+
+
+
+
+
+
+
+
+
+
+
+// let obj = {
+//     num: 5,
+//     calculateSquare: function () {
+//         console.log(this.num * this.num);
+//         console.log(this);
+//         const anotherFunc = () => {
+//             console.log(this, 'second function')
+//         }
+//         anotherFunc();
+//     }
+// }
+
+
+
+
+
+// let obj = {
+//     num : 5,
+//     calculateSquare: ()=>{
+//         console.log(this.num * this.num);
+//         console.log(this);
+//     }
+// }
+
+
+// obj.calculateSquare();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let fruits = ["apple", 'banana', 'cherry', 'grapes'];
+
+// fruits.forEach((fruit, i) => {
+//     if (i % 2 === 0) return;
+
+//     console.log(fruit, i);
+
+// });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let allNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let squarArr = [];
+
+// for (let i = 0; i < allNum.length; i++) {
+//     squarArr.push(allNum[i] * allNum[i]);
+// }
+
+// allNum.forEach((num) => {
+//     squarArr.push(num * num);
+// })
+
+
+
+// console.log(squarArr);
+
+
+
+
+
+
+
+
+
+
+
+
+// let allNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let squarArr = allNum.map(num => num * num);
+
+// console.log(squarArr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let userNames = ["haider", "abdullah", "muzammil", "ahmed"];
+
+// userNames = userNames.map(fName => fName.toUpperCase());
+
+// userNames = userNames.map(fName => {
+//     let firstChr = fName[0].toUpperCase();
+//     let restChr = fName.slice(1).toLowerCase();
+//     return `${firstChr}${restChr}`;
+// });
+
+// console.log(userNames);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let allNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+
+// let divisibleBy5 = allNum.filter(num => num % 5 === 0);
+
+// console.log(divisibleBy5);
+
+
+
+
+
+
+
+
+let students = ["haider", "abdullah", "muzammil", "ahmed", "aslam", "akram", "usman", "zeeshan"];
+let feesClear = ["ahmed", "aslam", "abdullah", "akram", "usman", "zeeshan",]
+let examClear = ["haider", "abdullah", "muzammil", "ahmed", "aslam"];
+
+let eligible = students.filter(student => (
+    feesClear.includes(student) &&
+    examClear.includes(student)
+));
+
+console.log(eligible);
+
