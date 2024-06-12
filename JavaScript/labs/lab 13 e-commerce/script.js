@@ -1,19 +1,5 @@
-// JavaScript code will be here
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const slides = document.querySelector('.slides');
-//     let currentIndex = 0;
-//     const totalSlides = slides.children.length;
-
-//     setInterval(() => {
-//         currentIndex = (currentIndex + 1) % totalSlides;
-//         slides.style.transform = `translateX(-${currentIndex * 100 / totalSlides}%)`;
-//     }, 5000); // Change slide every 5 seconds
-// });
-
-
 const slideImages = [
-  "https://burgerlab.com.pk/wp-content/uploads/2024/05/app-banner-2.jpg?c062ef&c062ef",
+  "https://pixexid.com/api/download/image/a-burger-with-a-sense-of-wanderlust-backpacks-through-a-food-landscape-with-fry-9hbp0rfh.jpeg",
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTn6q8_0SwnNkM0c0vOT_twL1yzrcvlGuToSw&s",
   "https://pixexid.com/api/download/image/a-burger-with-a-sense-of-wanderlust-backpacks-through-a-food-landscape-with-fry-9hbp0rfh.jpeg",
 ];
@@ -28,53 +14,27 @@ function createSlider() {
 }
 createSlider();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-let cart = [ {
-    image:
-      "https://burgerlab.com.pk/wp-content/uploads/2022/01/doppler.png?c062ef&c062ef",
-    productName: "THE DOUBLE DECKER",
-    price: "$10.00",
-    qty:1,
-    totalPrice: this.price * this.qty
-  }];
-
 const products = [
   {
-    image:
-      "https://burgerlab.com.pk/wp-content/uploads/2022/01/doppler.png?c062ef&c062ef",
+    id: "34147cb5-70ae-409a-9116-df6a47c698f6",
+    image: "https://em-cdn.eatmubarak.pk/55018/dish_image/1693985158.jpg",
     productName: "THE DOUBLE DECKER",
     price: "$10.00",
   },
   {
-    image:
-      "https://burgerlab.com.pk/wp-content/uploads/2022/01/quadra.png?c062ef&c062ef",
+    id: "adb520e4-5e1b-4a3e-a372-7ab21b0649dd",
+    image: "https://em-cdn.eatmubarak.pk/55018/dish_image/1693985158.jpg",
     productName: "QUADRA RELOADED",
     price: "$20.00",
   },
   {
-    image:
-      "https://burgerlab.com.pk/wp-content/uploads/2022/01/all-american-4.png?c062ef&c062ef",
+    id: "ee2389ae-ba2b-424c-9055-4624325e63ec",
+    image: "https://em-cdn.eatmubarak.pk/55018/dish_image/1693985158.jpg",
     productName: "ALL AMERICAN DOUBLE CHEESE",
     price: "$30.00",
   },
   {
+    id: "64d6fec5-f76c-44e0-ab27-337c3b60af98",
     image: "https://em-cdn.eatmubarak.pk/55018/dish_image/1693985158.jpg",
     productName: "Big Bang",
     price: "$40.00",
@@ -91,10 +51,59 @@ function listAllProducts() {
         <img src="${product.image}" alt="${product.productName} image">
         <h3>${product.productName}</h3>
         <p>${product.price}</p>
-        <h4>+</h4>
+        <button onclick="addToCartInObj(${i})">Add to Cart</button>
     </div>
     `;
     productListContainer.innerHTML += productCard;
   }
 }
 listAllProducts();
+
+let cart = {};
+function addToCartInObj(index) {
+  const { id } = products[index];
+
+  if (id in cart) {
+    cart[id].qty = cart[id].qty + 1;
+    cart[id].totalPrice = cart[id].qty * Number(cart[id].price.slice(1));
+  } else {
+    cart[id] = { ...products[index] };
+
+    cart[id].qty = 1;
+    cart[id].totalPrice = cart[id].qty * Number(cart[id].price.slice(1));
+  }
+
+  console.log(cart);
+}
+
+// let cart = [];
+
+// function addToCartInArr(index) {
+//   const { id } = products[index];
+//   let isMatchId = false;
+//   let targetIndex;
+//   cart.forEach((item, index) => {
+//     if (item.id === id) {
+//       isMatchId = true;
+//       console.log("match found", index);
+//       targetIndex = index;
+//     }
+//   });
+
+//   if (!isMatchId) {
+//     let productClone = {
+//       ...products[index],
+//     };
+
+//     productClone.qty = 1;
+//     productClone.totalPrice =
+//       productClone.qty * Number(productClone.price.slice(1));
+
+//     cart.push(productClone);
+//   } else {
+//     let cartItem = cart[targetIndex];
+//     cartItem.qty = cartItem.qty + 1;
+//     cartItem.totalPrice = cartItem.qty * Number(cartItem.price.slice(1));
+//   }
+//   console.log(cart);
+// }
