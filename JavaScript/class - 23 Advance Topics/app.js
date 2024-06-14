@@ -787,14 +787,266 @@ userName => `Welcome ${userName}!`;
 
 
 
-let students = ["haider", "abdullah", "muzammil", "ahmed", "aslam", "akram", "usman", "zeeshan"];
-let feesClear = ["ahmed", "aslam", "abdullah", "akram", "usman", "zeeshan",]
-let examClear = ["haider", "abdullah", "muzammil", "ahmed", "aslam"];
+// let students = ["haider", "abdullah", "muzammil", "ahmed", "aslam", "akram", "usman", "zeeshan"];
+// let feesClear = ["ahmed", "aslam", "abdullah", "akram", "usman", "zeeshan",]
+// let examClear = ["haider", "abdullah", "muzammil", "ahmed", "aslam"];
 
-let eligible = students.filter(student => (
-    feesClear.includes(student) &&
-    examClear.includes(student)
-));
+// let eligible = students.filter(student => (
+//     feesClear.includes(student) &&
+//     examClear.includes(student)
+// ));
 
-console.log(eligible);
+// console.log(eligible);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+arr.forEach((item, index, arr)=>{});
+
+arr.map((item, index, arr)=>{})
+
+arr.filter((item, index, arr)=>{return condition;});
+
+*/
+
+
+
+
+
+
+// let num = [1, 2, 5, 3, 4, 7, 6, 3, 8, 8, 10];
+// let sum = 0;
+
+// for (let i = 0; i < num.length; i++) {
+//     sum += num[i];
+// }
+
+// console.log(sum)
+
+
+
+
+
+
+
+// let num = [1, 2, 5, 3, 4, 7, 6, 3, 8, 8, 10];
+
+// let sum = num.reduce((total, item) => total + item, 10);
+
+// console.log(sum);
+
+
+
+
+
+
+
+
+
+
+
+// let str = "hello world";
+
+// str = str.split("").reverse().join("");
+
+// str = str.split("");
+
+// str = str.reduce((reverseStr, chr) => {
+//     return chr + reverseStr;
+//     //      "o"   +     "lleh"
+// }, "");
+
+// console.log(str)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let str = "the quick brown fox jumps over the lazy dog.";
+// let vowels = ["a", "e", "i", "o", "u"];
+
+
+// let vowelCount = str.split("").reduce((count, chr) => {
+//     return vowels.includes(chr) ? count + 1 : count;
+// }, 0);
+
+// console.log(vowelCount)
+
+
+
+
+
+
+
+
+
+
+
+
+// let str1 = "Saylani Mass Information Technology"; //SMIT
+// let str2 = "Pakistan Telecommunication Company Limited"; //PTCL
+
+// let str1Abbr = str1.split(" ").reduce(findAbbr, "");
+
+// let str2Abbr = str2.split(" ").reduce(findAbbr, "");
+
+// function findAbbr(abbr, words) {
+//     return abbr + words[0];
+// }
+
+// console.log(str1Abbr, str2Abbr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let teamAges = [15, 45, 19, 22, 40, 24];
+
+// let eligibleForAdmission = teamAges.every((age) => age >= 15);
+
+// console.log(eligibleForAdmission);
+
+// let eligibleForGym = teamAges.some((age) => age >= 40);
+
+// console.log(eligibleForGym)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let users = [
+    { email: "headeralishah@gmail.com", password: "12345678" },
+    { email: "abdullah@gmail.com", password: "12345678" },
+    { email: "xyz@gmail.com", password: "12345678" },
+]
+
+function authenticate(userEmail, userPassword) {
+    return new Promise((resolve, reject) => {
+        let authenticated = users.some(({ email, password }) => {
+            return email === userEmail && password === userPassword
+        })
+        if (authenticated) {
+            resolve('successfully login');
+        }
+        else {
+            reject('incorrect email or password');
+        }
+    });
+}
+
+authenticate("headeralishah@gmail.com", "12345678a")
+    .then((succes) => {
+        console.log(succes);
+    })
+    .catch((error) => {
+        console.log(error);
+    })
