@@ -1,0 +1,13 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "We are learning typescript.",
+  "scripts": {
+    "start": "npx tsc --watch",
+    "build": "npx tsc"
+  },
+  "author": "Haider Ali Shah",
+  "devDependencies": {
+    "typescript": "^5.5.2"
+  }
+}
