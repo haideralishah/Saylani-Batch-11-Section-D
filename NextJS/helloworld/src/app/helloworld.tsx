@@ -1,10 +1,31 @@
+'use client';
 
 
-export default function HelloWorld(){
+import MyButton from "./button";
+
+type HelloWorldTypes = {
+    greet: string,
+    message: string,
+    label: string
+    btnHandler: () => void;
+}
+
+export default function HelloWorld({ 
+    greet, 
+    message, 
+    label, 
+    btnHandler
+ }: HelloWorldTypes) {
+    
     return (
         <>
-            <h1>Hello World</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, officia! Et id sapiente debitis, architecto vitae ullam, maiores ab magni tenetur eligendi eum aspernatur sint iste rerum numquam vero dolorem!</p>
+            <h1>{greet}</h1>
+            <p>{message}</p>
+            <MyButton 
+                label={label} 
+                clickHandler={btnHandler}
+            />
         </>
+
     )
 }
