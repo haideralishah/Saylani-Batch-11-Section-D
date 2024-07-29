@@ -26,6 +26,18 @@ export default function AllProducts() {
                 <Product />
                 <Product />
 
+                <Product />
+                <Product />
+                <Product />
+
+
+                <Product />
+                <Product />
+                <Product />
+
+
+
+
             </tbody>
         </table>
     );
