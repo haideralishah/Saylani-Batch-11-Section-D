@@ -21,4 +21,4 @@ export default function Categories({categories}: CategoriesType) {
             }
         </>
     )
-}
+} 

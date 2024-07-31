@@ -1,8 +1,13 @@
 import Product from './product';
+import { ProductItemType } from "./product-item-type";
 
 
+type ProductsListType = {
+    productsList: ProductItemType[]
+}
 
-export default function AllProducts() {
+
+export default function AllProducts({ productsList }: ProductsListType) {
     return (
         <table style={{ border: '1px solid black' }}>
             <thead>
@@ -22,18 +27,18 @@ export default function AllProducts() {
                 </tr>
             </thead>
             <tbody>
-                <Product />
-                <Product />
-                <Product />
 
-                <Product />
-                <Product />
-                <Product />
-
-
-                <Product />
-                <Product />
-                <Product />
+                {
+                    productsList.map(({ id, name, price, category }) => (
+                        <Product
+                            key={name + id}
+                            id={id}
+                            name={name}
+                            price={price}
+                            category={category}
+                        />
+                    ))
+                }
 
 
 
