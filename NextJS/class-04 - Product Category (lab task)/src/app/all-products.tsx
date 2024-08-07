@@ -29,10 +29,10 @@ export default function AllProducts({ productsList }: ProductsListType) {
             <tbody>
 
                 {
-                    productsList.map(({ id, name, price, category }) => (
+                    productsList.map(({ id, name, price, category }, index) => (
                         <Product
                             key={name + id}
-                            id={id}
+                            id={index + 1}
                             name={name}
                             price={price}
                             category={category}
