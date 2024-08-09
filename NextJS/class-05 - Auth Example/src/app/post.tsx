@@ -1,14 +1,14 @@
 import { PostType } from "./usertype"
 
-type PostPropType={
+type PostPropType = {
     post: PostType
 }
 
-export default function Post({post}: PostPropType){
+export default function Post({ post: { content, likes } }: PostPropType) {
     return (
         <>
-            <p>{post.content}</p>
-            <b>{post.likes}</b>
+            <p>{content}</p>
+            <b>Likes: {likes}</b>
         </>
     )
 }

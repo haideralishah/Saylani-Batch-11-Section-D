@@ -8,13 +8,24 @@ type UserTimelineType = {
 };
 
 export default function UserTimeline({ user }: UserTimelineType) {
-    console.log(user)
+  console.log(user)
   return (
     <>
       <Greet userName={user?.userName} />
-      <Hobbies 
+      <Hobbies
         hobbies={user?.hobbies}
-      />     
+      />
+
+      {
+        user?.post?.map((postData, index) => (
+          <Post
+            key={postData.content + index}
+            post={postData}
+          />
+        ))
+      }
+
+
     </>
   );
 }

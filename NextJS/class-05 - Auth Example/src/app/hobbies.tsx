@@ -3,17 +3,14 @@ type HobbiesType = {
     hobbies?: string[]
 }
 
-
-export default function Hobbies({hobbies}:HobbiesType){
-
+export default function Hobbies({ hobbies }: HobbiesType) {
     return (
         <ul>
-                
             {
-                hobbies?.map((hobby, i)=><li>{hobby}</li>)
+                hobbies && hobbies.map((hobby, index) => (
+                    <li key={hobby + index}>{hobby}</li>
+                ))
             }
-
-
         </ul>
     )
 }

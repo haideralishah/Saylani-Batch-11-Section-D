@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import {UserType} from './usertype'
+import { UserType } from './usertype'
 
 const users: UserType[] = [
   {
     email: "haider@gmail.com",
     password: "123456",
     userName: "haider",
-    hobbies: ["swimmming", "gardening"],
+    hobbies: ["swimmming", "gardening", "gym", "video games"],
     post: [
       {
         content:
@@ -26,7 +26,7 @@ const users: UserType[] = [
     email: "abdullah@gmail.com",
     password: "123456",
     userName: "abdullah",
-    hobbies: ["gym", "video games"],
+    hobbies: ["gym", "video games", "swimming"],
     post: [
       {
         content:
@@ -55,6 +55,7 @@ export default function Login({ authenticate, setUser }: LoginType) {
     let [userFound] = users.filter(
       (user) => email === user.email && password === user.password
     );
+
     if (userFound) {
       authenticate(true);
       setUser(userFound);
@@ -78,7 +79,7 @@ export default function Login({ authenticate, setUser }: LoginType) {
       <label htmlFor="password">
         Password:
         <input
-          type="text"
+          type="password"
           id="password"
           value={password}
           onChange={(e) => {
