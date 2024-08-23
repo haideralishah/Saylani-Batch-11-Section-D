@@ -1,0 +1,14 @@
+Student Management Portal
+route name: /
+btn add new student
+
+list all students 
+btn see details
+btn delete 
+btn edit
+
+route name: /:rollnum
+
+
+route name: /createstudent
+form field and save button
