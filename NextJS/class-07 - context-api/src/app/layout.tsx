@@ -1,3 +1,4 @@
+import AuthContextProvider from "@/context/authentication";
 import ToggleThmeContext from "@/context/toggletheme";
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
@@ -18,9 +19,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ToggleThmeContext>
-          {children}
-        </ToggleThmeContext>
+
+
+        <AuthContextProvider>
+          <ToggleThmeContext>
+            {children}
+          </ToggleThmeContext>
+        </AuthContextProvider>
 
       </body>
     </html>
