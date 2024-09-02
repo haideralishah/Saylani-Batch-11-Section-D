@@ -2,7 +2,7 @@
 
 import { createContext, ReactPortal, useContext, useState } from "react";
 
-const TgleThmContext = createContext({});
+const TgleThmContext = createContext();
 
 export default function ToggleThmeContext(
     { children }: { children: React.ReactNode }

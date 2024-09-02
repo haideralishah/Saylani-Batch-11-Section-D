@@ -432,3 +432,156 @@ arr.filter((item, index, arr)=>{return condition;});
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let users = [
+//     { email: "headeralishah@gmail.com", password: "12345678" },
+//     { email: "abdullah@gmail.com", password: "12345678" },
+//     { email: "xyz@gmail.com", password: "12345678" },
+// ]
+
+// function authenticate(userEmail, userPassword) {
+//     return new Promise((resolve, reject) => {
+//         let authenticated = users.some(({ email, password }) => {
+//             return email === userEmail && password === userPassword
+//         })
+//         if (authenticated) {
+//             resolve('successfully login');
+//         }
+//         else {
+//             reject('incorrect email or password');
+//         }
+//     });
+// }
+
+// authenticate("headeralishah@gmail.com", "12345678a")
+//     .then((succes) => {
+//         console.log(succes);
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// try {
+//     let message = prompt('what is the message?');
+//     alert(msg);
+// }
+// catch (error) {
+//     console.error(error);
+// }
+
+// console.log("hello mars");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function returnNum() {
+
+    return new Promise(function (resolve, reject) {
+        setTimeout(() => resolve(1), 1000);
+    })
+
+}
+
+returnNum()
+    .then(function (result) {
+        alert(result);
+        return result * 2;
+    })
+    .then(function (result) { // (***)
+        alert(result);
+        return result * 2;
+    })
+    .then(function (result) {
+        alert(result);
+        return result * 2;
+    });
+
+
+
+console.log('Hello Mars');
