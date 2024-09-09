@@ -4,11 +4,12 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 const auth = getAuth(app);
 
 export function signupWithEmailPassword(email: string, password: string) {
+    console.log(email, password, 'inside func')
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed up 
-            const user = userCredential.user;
-            console.log(user, 'user created successfully.');
+            const { email, uid } = userCredential.user;
+            console.log(email, uid, 'user created successfully.', userCredential);
             // ...
         })
         .catch((error) => {
@@ -24,8 +25,10 @@ export function loginWithEmailPassword(email: string, password: string) {
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in 
-            const user = userCredential.user;
-            console.log(user, 'user')
+            const { email, uid } = userCredential.user;
+
+            console.log(email, uid, 'user LOGGED IN successfully.', userCredential);
+
             // ...
         })
         .catch((error) => {
