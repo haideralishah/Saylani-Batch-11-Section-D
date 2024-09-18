@@ -9,9 +9,10 @@ import { useState } from "react";
 export default function Home() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-<<<<<<< HEAD
-  const [user, setUser] = useState({});
-=======
+  const [rollNum, setRollNum] = useState("");
+  const [studentName, setStudentName] = useState("");
+
+
   // const auth = getAuth(app);
 
   // const signup = async () => {
@@ -23,11 +24,21 @@ export default function Home() {
 
 
   // }
->>>>>>> 4040ffe3d46cfea6cfb5d8f13bdcb9c9bdca827a
 
   return (
     <>
       <h1>Hello Auth</h1>
+      Roll Number:   <input type="email"
+        value={rollNum}
+        onChange={(e) => { setRollNum(e.target.value) }}
+      /><br />
+
+      Student Name:   <input type="email"
+        value={studentName}
+        onChange={(e) => { setStudentName(e.target.value) }}
+      /><br />
+
+
       Email:   <input type="email"
         value={email}
         onChange={(e) => { setEmail(e.target.value) }}
@@ -39,7 +50,7 @@ export default function Home() {
       />
 
       <button onClick={
-        () => { signupWithEmailPassword(email, password) }
+        () => { signupWithEmailPassword(email, password, rollNum, studentName) }
 
         // signup
 
