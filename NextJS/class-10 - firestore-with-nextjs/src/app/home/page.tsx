@@ -1,11 +1,17 @@
 "use client";
 
-import { saveTodo } from "@/firebase/firebasefirestore";
-import { useState } from "react"
+import { fetchTodos, saveTodo } from "@/firebase/firebasefirestore";
+import { useEffect, useState } from "react"
 
 
 export default function Home() {
-    const [todo, setTodo] = useState('')
+    const [todo, setTodo] = useState('');
+
+    useEffect(()=>{
+        fetchTodos();
+    }, []);    
+
+    
     return (
         <>
             <h1>Hello Home</h1>
