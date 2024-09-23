@@ -11,7 +11,7 @@ import {
 import { app } from "./firbaseconfig";
 import { auth } from "./firebaseauth";
 
-const db = getFirestore(app);
+export const db = getFirestore(app);
 
 type UserType = {
   email: string;
@@ -66,10 +66,22 @@ export async function fetchTodos() {
 
   let allTodosSnapshot = await getDocs(q);
 
-  allTodosSnapshot.forEach((todo) => {
-    let todoData = todo.data();
-    todoData.id = todo.id;
+  let allTodos = allTodosSnapshot.docs.map((todoSnapshot) => {
+    let todo = todoSnapshot.data();
+    todo.id = todoSnapshot.id;
+    return todo
+  })
+  return allTodos;
 
-    console.log(todoData);
-  });
+
+
+
+  // allTodosSnapshot.forEach((todo) => {
+  //   let todoData = todo.data();
+  //   todoData.id = todo.id;
+  //   console.log(todoData);
+  // });
+
+
+
 }
