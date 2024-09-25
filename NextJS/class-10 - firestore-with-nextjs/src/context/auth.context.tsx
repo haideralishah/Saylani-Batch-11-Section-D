@@ -33,6 +33,7 @@ export function AuthContextProvider({ children }: AuthContextProviderType) {
                 const { email, uid } = loggedInUser;
                 setUser({ email, uid });
                 route.push("/home");
+
             }
             else {
                 console.log('inside onauthstatechange else statement');
