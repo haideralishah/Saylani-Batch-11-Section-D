@@ -7,7 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { collection, DocumentData, onSnapshot, query, Unsubscribe, where } from "firebase/firestore";
 import Link from "next/link";
 import { useEffect, useState } from "react"
-
+import style from "./home.module.css";
 export default function Home() {
     const [todo, setTodo] = useState('');
     const [allTodos, setAllTodos] = useState<DocumentData[]>([]);
@@ -76,7 +76,7 @@ export default function Home() {
     return (
         <>
             <Link href={"./about"}>About</Link>
-            <h1>Hello Home</h1>
+            <h1 className={style.special}>Hello Home</h1>
             <input type="text"
                 value={todo}
                 onChange={(e) => { setTodo(e.target.value) }}
@@ -95,3 +95,4 @@ export default function Home() {
         </>
     )
 }
+
