@@ -51,32 +51,52 @@ export default function Home() {
         let currentUserUID = auth.currentUser?.uid;
         let condition = where("uid", "==", currentUserUID);
         let q = query(collectionRef, condition);
-        let allTodosClone = [...allTodos];
+        // let allTodosClone = [...allTodos];
 
         readTodosRealtime = onSnapshot(q, (querySnapshot) => {
-            querySnapshot.docChanges().forEach((change) => {
-                if (change.type === "added") {
-                    let todo = change.doc.data();
-                    todo.id = change.doc.id;
-                    allTodosClone.push(todo);
-                    setAllTodos([...allTodosClone])
-                }
-                if (change.type === "modified") {
-                    console.log('data modified');
-                }
-                if (change.type === "removed") {
-                }
-            })
+         
+            let userTodo = querySnapshot.docs.map((todoDoc) => ({
+                ...todoDoc.data(),
+                id: todoDoc.id
+
+            }))
+            setAllTodos(userTodo);
+            
+            // console.log(userTodo);
+
+            // querySnapshot.docChanges().forEach((change) => {
+            //     if (change.type === "added") {
+            //         let todo = change.doc.data();
+            //         todo.id = change.doc.id;
+            //         allTodosClone.push(todo);
+            //         setAllTodos([...allTodosClone])
+            //     }
+            //     if (change.type === "modified") {
+            //         console.log('data modified');
+            //     }
+            //     if (change.type === "removed") {
+            //     }
+            // })
         })
 
 
 
     }
+    const basicStyle = {
+        color: todo ? "red" : "blue",
+        backgroundColor: "yellow"
+    }
+    const advancedStyle = {
+        fontSize: "72px"
+    }
 
     return (
         <>
             <Link href={"./about"}>About</Link>
-            <h1 className={style.special}>Hello Home</h1>
+            <h1
+                className={`m-8 p-8 text-red`}
+            // style={{ ...basicStyle, ...advancedStyle }}
+            >Hello Home</h1>
             <input type="text"
                 value={todo}
                 onChange={(e) => { setTodo(e.target.value) }}
