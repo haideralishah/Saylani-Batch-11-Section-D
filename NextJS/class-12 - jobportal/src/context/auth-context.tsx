@@ -3,8 +3,10 @@ import { auth, db } from "@/firebase/firebaseconfig";
 import { AdminType } from "@/types/admin-type";
 import { CompanyType } from "@/types/company-type";
 import { JobSeekerType } from "@/types/jobseeker-type";
+import { UserType } from "@/types/user-type";
 import { onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
+import { useRouter } from "next/navigation";
 import {
   createContext,
   ReactNode,
@@ -18,16 +20,16 @@ type ChildrenType = {
 };
 
 type ContextType = {
-  user: JobSeekerType | CompanyType | AdminType | null;
-  setUser: (user: JobSeekerType | CompanyType | AdminType | null) => void;
+  user: UserType | null;
+  setUser: (user: UserType | null) => void;
 };
 
 const AuthContext = createContext<ContextType | null>(null);
 
 export default function AuthContextProvider({ children }: ChildrenType) {
-  const [user, setUser] = useState<
-    JobSeekerType | CompanyType | AdminType | null
-  >(null);
+  const [user, setUser] = useState<UserType | null>(null);
+
+  const route = useRouter();
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -38,15 +40,23 @@ export default function AuthContextProvider({ children }: ChildrenType) {
         setUser(null);
       }
     });
-  });
+  }, []);
 
   const fetchuserData = async (uid: string) => {
     let docRef = doc(db, "users", uid);
     try {
       let userFound = await getDoc(docRef);
-
       let user = userFound.data();
-      //   setUser(user as JobSeekerType | CompanyType | AdminType);
+
+      if (!user) return;
+
+      // if (!user.name) {
+      //   route.push("/company/companyinfo");
+      // } else {
+      //   route.push("/company");
+      // }
+
+      setUser(user as UserType);
     } catch (e) {
       console.error("error:", e);
     }
@@ -54,7 +64,9 @@ export default function AuthContextProvider({ children }: ChildrenType) {
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>
-      {children}``
+      {children}
     </AuthContext.Provider>
   );
 }
+
+export const useAuthContext = () => useContext(AuthContext);
