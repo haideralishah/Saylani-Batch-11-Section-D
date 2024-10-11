@@ -50,12 +50,6 @@ export default function AuthContextProvider({ children }: ChildrenType) {
 
       if (!user) return;
 
-      // if (!user.name) {
-      //   route.push("/company/companyinfo");
-      // } else {
-      //   route.push("/company");
-      // }
-
       setUser(user as UserType);
     } catch (e) {
       console.error("error:", e);

@@ -4,8 +4,11 @@ import AuthForm from "@/components/auth-forms";
 import { auth } from "@/firebase/firebaseconfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
+  const route = useRouter();
+
   const login = async (email: string, password: string) => {
     try {
       let userCredential = await signInWithEmailAndPassword(
@@ -15,6 +18,7 @@ export default function Login() {
       );
       const userData = userCredential.user;
       console.log(userData, "userData");
+      route.push('/company');
     } catch (e) {
       console.error(e);
     }

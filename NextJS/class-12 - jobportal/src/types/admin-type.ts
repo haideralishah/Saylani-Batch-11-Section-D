@@ -1,8 +1,8 @@
-import { UserRole } from "./user-role-type"
+import { UserRole } from "./user-role-type";
 
 export type AdminType = {
-    email: string,
-    uid: string,
-    role: UserRole,
-
-}
+  name?: string;
+  email: string;
+  uid: string;
+  role: UserRole;
+};

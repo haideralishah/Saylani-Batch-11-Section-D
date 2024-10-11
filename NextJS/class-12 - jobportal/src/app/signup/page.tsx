@@ -6,8 +6,11 @@ import { UserRole } from "@/types/user-role-type";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Signup() {
+  const route = useRouter();
+
   const signup = async (email: string, password: string, role?: UserRole) => {
     try {
       let userCredential = await createUserWithEmailAndPassword(
@@ -30,6 +33,7 @@ export default function Signup() {
     let user = { email, uid, role };
     let docRef = doc(db, "users", uid);
     await setDoc(docRef, user);
+    route.push('/company');
   };
 
   return (

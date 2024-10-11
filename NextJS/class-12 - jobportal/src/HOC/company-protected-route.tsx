@@ -1,6 +1,7 @@
 "use client";
 
 import { useAuthContext } from "@/context/auth-context";
+import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { ReactNode, useEffect } from "react";
 
@@ -20,7 +21,12 @@ export default function CompanyProtectedRoutes({
     } else if (user?.role === "admin") {
       route.push("/admin");
     }
+    if (user && !("name" in user!)) {
+      route.push("/company/companyinfo");
+    }
   }, [user]);
 
-  return <>{children}</>;
+  return <>
+   {children}
+  </>;
 }
