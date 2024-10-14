@@ -18,7 +18,7 @@ export default function Login() {
       );
       const userData = userCredential.user;
       console.log(userData, "userData");
-      route.push('/company');
+      route.push("/company/all-jobs");
     } catch (e) {
       console.error(e);
     }

@@ -5,24 +5,24 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { ReactNode, useEffect } from "react";
 
-type CompanyProtectedRoutesTypes = {
+type JobSeekerProtectedRoutesTypes = {
   children: ReactNode;
 };
 
-export default function CompanyProtectedRoutes({
+export default function JobSeekerProtectedRoutes({
   children,
-}: CompanyProtectedRoutesTypes) {
+}: JobSeekerProtectedRoutesTypes) {
   const { user } = useAuthContext()!;
   const route = useRouter();
 
   useEffect(() => {
-    if (user?.role === "job seeker") {
-      route.push("/jobseeker");
+    if (user?.role === "company") {
+      route.push("/company/all-jobs");
     } else if (user?.role === "admin") {
       route.push("/admin");
     }
-    if (user && user.role === "company" && !("name" in user!)) {
-      route.push("/company/companyinfo");
+    if (user && user.role === "job seeker" && !("name" in user!)) {
+      route.push("/jobseeker/jobseekerinfo");
     }
   }, [user]);
 

@@ -33,7 +33,11 @@ export default function Signup() {
     let user = { email, uid, role };
     let docRef = doc(db, "users", uid);
     await setDoc(docRef, user);
-    route.push('/company');
+    if (role === "company") {
+      route.push("/company/all-jobs");
+    } else if (role === "job seeker") {
+      route.push("/jobseeker");
+    }
   };
 
   return (

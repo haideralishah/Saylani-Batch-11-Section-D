@@ -3,7 +3,7 @@ import { signOut } from "firebase/auth";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function CompanyNavbar() {
+export default function JobSeekerNavbar() {
   const route = useRouter();
 
   const signout = async () => {
@@ -40,10 +40,10 @@ export default function CompanyNavbar() {
               <Link href={"/company/all-jobs"}>All Jobs</Link>
             </li>
             <li>
-              <Link href={"/company/create-new-job"}>Create New Job</Link>
+              <Link href={"/company/create-new-job"}>Applied Jobs</Link>
             </li>
             <li>
-              <Link href={"/company/see-applications"}>See Applications</Link>
+              <Link href={"/company/see-applications"}>Favorite Jobs</Link>
             </li>
           </ul>
         </div>
