@@ -43,8 +43,13 @@ export default function AllJobs() {
   return (
     <>
       {companyJobs.length > 0 &&
-        companyJobs.map(({ jobTitle, jobDescription }) => (
-          <JobCard jobTitle={jobTitle} jobDescription={jobDescription} />
+        companyJobs.map(({ jobTitle, jobDescription, hold, deleted }) => (
+          <JobCard
+            jobTitle={jobTitle}
+            jobDescription={jobDescription}
+            hold={hold}
+            deleted={deleted}
+          />
         ))}
     </>
   );

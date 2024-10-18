@@ -9,6 +9,8 @@ import {
   DocumentData,
   getDoc,
   onSnapshot,
+  query,
+  where,
 } from "firebase/firestore";
 import { useEffect, useState } from "react";
 
@@ -20,8 +22,13 @@ export default function JobSeekerHome() {
 
   const fetchAllJobs = async () => {
     let jobsRef = collection(db, "jobs");
+    const q1 = query(
+      jobsRef,
+      where("deleted", "==", false),
+      where("hold", "==", false)
+    );
 
-    const unsub = onSnapshot(jobsRef, async (jobsSnapshot) => {
+    const unsub = onSnapshot(q1, async (jobsSnapshot) => {
       let allJobs = jobsSnapshot.docs.map(async (job) => {
         let jobData = job.data();
 
