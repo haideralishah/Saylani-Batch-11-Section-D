@@ -12,7 +12,8 @@ const initialProducts = [
 ];
 
 export const useEcommerceStore = create((set) => ({
-  products: initialProducts,
-  cart: [],
-  updateCart: (cart: any[]) => set({ cart }),
+  products: [],
+  cart: {},
+  updateCart: (cart) => set({ cart }),
+  updateProducts: (products) => set({ products })
 }));

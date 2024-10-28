@@ -1,23 +1,42 @@
 "use client";
 
 import { useEcommerceStore } from "@/store/ecommerce-example-store";
-import { useCallback } from "react";
 
 export default function Cart() {
-    const products = useEcommerceStore((store) => store.products);
+  const { cart } = useEcommerceStore();
 
+  let values = Object.values(cart);
+  let grandTotalPrice = values.reduce(
+    (prevPrice, { price, qty }) => price * qty + prevPrice,
+    0
+  );
 
+  return (
+    <div>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total Price</th>
+        </tr>
 
-    return (
-        <>
-            {products.map(({ name, price }, index) => (
-                <div key={name + index} style={{ border: "1px solid black", width: "20%", margin: "15px", padding: "15px", textAlign: 'center' }}>
-                    <h3>{name}</h3>
-                    <h3>{price}</h3>
-                    <button onClick={() => { updateCart(index) }}>Add To Cart</button>
-                </div>
-            ))}
-        </>
+        {Object.keys(cart).map((key) => (
+          <tr>
+            <td>{cart[key].title}</td>
+            <td>{cart[key].price}</td>
+            <td>{cart[key].qty}</td>
+            <td>{cart[key].price * cart[key].qty}</td>
+          </tr>
+        ))}
 
-    )
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>{grandTotalPrice}</th>
+        </tr>
+      </table>
+    </div>
+  );
 }
