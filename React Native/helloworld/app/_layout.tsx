@@ -1,5 +1,5 @@
-import HelloWorld from "@/components/Helloworld";
+import Counter from "@/components/Counter";
 
 export default function RootLayout() {
-  return <HelloWorld />;
+  return <Counter />;
 }
